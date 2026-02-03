@@ -1,0 +1,31 @@
+# Rules for AI
+
+1. **Strict Type Safety:** Never use any. If a type is unknown, use unknown. Use Zod to validate all external API responses.
+
+2. **No Boolean Flags:** Avoid isLoading or isError. Use Discriminated Unions (e.g., status: 'loading' | 'success' | 'error').
+
+3. **Component Limits:** No single component file may exceed 150 lines. Logic exceeding 20 lines must be moved to a custom hook.
+
+4. **Semantic HTML Only:** Never use a div for an action; use button. Never use span for headings.
+
+5. **Absolute Imports:** Use @/components/... instead of relative paths like ../../components/....
+
+6. **Functional Mastery:** Prefer functional and declarative patterns. Avoid classes and this entirely.
+
+7. **Named Exports:** Use named exports for all components and utilities. No export default.
+
+8. **Error Perimeter:** Every asynchronous component must be wrapped in a custom <ErrorBoundary />.
+
+9. **Tailored Styling:** Use Tailwind CSS utility classes exclusively. Avoid custom CSS files or inline style objects.
+
+10. **Early Returns:** Use guard clauses to return early. Never use an else block after an if that returns.
+
+11. **Deterministic Naming:** Prefix all event handlers with handle (e.g., handleClick, handleInputChange).
+
+12. **Zero-Duplicate Logic:** If the same logic appears twice, it must be extracted into a helper or service.
+
+13. **Explicit Dependencies:** All useEffect or useMemo hooks must have a fully populated dependency array. No "cheating" with // eslint-disable-line.
+
+14. **Accessibility (A11y):** All interactive elements must have aria-label and tabIndex.
+
+15. **No Placeholders:** Never leave TODO, FIXME, or // ... logic here comments. The code must be 100% complete.
