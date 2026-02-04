@@ -101,6 +101,8 @@ export function validateDataIntegrity(
   return { valid: true };
 }
 
-export function parseSensorData(raw: unknown): SensorData {
+const parseSensorData(raw: unknown): SensorData {
   return sensorDataSchema.parse(raw);
 }
+
+export default parseSensorData;
