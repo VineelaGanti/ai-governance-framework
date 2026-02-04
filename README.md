@@ -1,26 +1,29 @@
-# AI Engineering Governance Framework & Audit
+# AI Governance & Cyber-Physical Integrity Framework
 
-## 🚀 Overview
-This repository serves as a documented case study in **Generative AI Governance**. It explores the gap between high-level architectural requirements (15 Strict Rules) and the actual output of State-of-the-Art (SOTA) LLMs (GPT-4.1).
+## 🎯 Project Thesis
+This repository demonstrates a **Human-in-the-Loop (HITL) Governance Layer** designed to mitigate "Architectural Slop" and "Physics Hallucinations" in AI-generated industrial software.
 
-## 🔬 The Research Objective
-To quantify and correct "Information Fragmentation" and "Architectural Slop" in AI-driven software development pipelines.
+## 🛠️ Key Innovation: The Governance Engine
+Unlike standard AI-assisted development, this project utilizes a proprietary **15-Rule Invariant Set** enforced via a custom-built Audit Engine (`scripts/governance-check.mjs`).
 
-## ⚖️ The 15 Governance Rules
-This project enforces a proprietary set of 15 architectural invariants, including:
-- **Rule #7: Named Exports Only** (Preventing naming drift)
-- **Rule #10: Early Returns / No Else** (Reducing logical complexity)
-- **Rule #13: Explicit Error Perimeter** (Preventing silent system failures)
+### Core Features:
+1. **Deterministic Physics Engine:** Validates that AI-generated telemetry follows physical laws (e.g., Power/Speed correlations) via `@/lib/mock-factory.ts`.
+2. **Automated Governance Intercept:** A pre-commit audit that flags architectural drift (Nested Ternaries, Default Exports) before code can be merged.
+3. **Accountability Log:** Every deviation from the governance framework requires a signed, timestamped **Expert Justification** (stored in `OVERRIDE_LOG.md`).
 
-## 📊 Audit Results (Phase 1)
-| Violation | Model Behavior | Resolution Strategy |
+## 📊 Evidence of Original Contribution
+| Asset | Function | EB-1A Significance |
 | :--- | :--- | :--- |
-| **Silent Failures** | Swallowed WebSocket errors | Implemented strict `console.warn` triggers |
-| **Logic Duplication** | Fragmented mock data | Extracted to centralized `@/lib/mock-factory` |
-| **Export Drift** | Reverted to `export default` | Forced refactor to Named Exports |
+| `.cursorrules` | Architectural Constitution | Methodology Design |
+| `OVERRIDE_LOG.md` | Expert Audit Trail | Professional Judgment |
+| `mock-factory.ts` | Integrity Validation | Technical Originality |
 
-## 🛠️ Tech Stack
-- **Framework:** Next.js 15 (App Router)
-- **State Management:** XState (Finite State Machines)
-- **Real-time:** Socket.io
-- **Governance Layer:** Cursor AI + Custom `.cursorrules`
+## 🚀 How to Run the Audit
+To verify the governance state of this repository:
+```bash
+node scripts/governance-check.mjs
+
+## 📝 Verifiable Audit Trail
+This repository maintains a transparent history of architectural decisions. 
+
+The `OVERRIDE_LOG.md` file serves as a **Permanent Record of Professional Judgment**, documenting every instance where an expert human override was required to balance framework limitations with project governance rules.
