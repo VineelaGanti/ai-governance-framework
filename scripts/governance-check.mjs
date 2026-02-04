@@ -33,7 +33,7 @@ async function runAudit() {
 
   const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
   
-  console.log("\n--- EB-1A AUDIT LOG GENERATION ---");
+  console.log("\n---AUDIT LOG GENERATION ---");
   rl.question("Provide your expert technical justification to override this rule: ", (answer) => {
     const logEntry = `\n[${new Date().toISOString()}]\nFILE: ${violations[0].file}\nJUSTIFICATION: ${answer}\n-------------------`;
     fs.appendFileSync('OVERRIDE_LOG.md', logEntry);

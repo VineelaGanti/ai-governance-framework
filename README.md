@@ -27,3 +27,15 @@ node scripts/governance-check.mjs
 This repository maintains a transparent history of architectural decisions. 
 
 The `OVERRIDE_LOG.md` file serves as a **Permanent Record of Professional Judgment**, documenting every instance where an expert human override was required to balance framework limitations with project governance rules.
+
+## 🧪 Case Study: Physics-Based Data Integrity
+To solve the problem of "AI Hallucinations" in industrial telemetry, this project implements a **Deterministic Physics Layer**.
+
+### The Experiment:
+- **Hypothesis:** LLMs cannot natively maintain physical invariants across multiple data streams (e.g., Speed vs. Heat).
+- **Implementation:** A validation engine that enforces $P \propto \omega^2$ (Power proportional to Speed squared) and thermal dissipation constants.
+- **Result:** The system successfully identifies and rejects "Ghost Signals" where data streams drift into physically impossible states.
+
+### Technical Evidence
+![Governance Audit Success](./assets/audit-passed.png)
+![Expert Override Log](./assets/audit-log.png)
