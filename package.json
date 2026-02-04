@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "precommit": "node scripts/governance-check.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
