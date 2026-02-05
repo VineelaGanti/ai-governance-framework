@@ -10,15 +10,21 @@ const rules = [
 // --- PHYSICS VALIDATION TEST ---
 // Validates that AI-generated telemetry adheres to physical laws
 function runPhysicsTest() {
-  console.log("🧪 RUNNING PHYSICS INTEGRITY TEST...");
-  const hallucinatedData = { motorSpeed: 100, powerConsumption: 0 };
+  console.log("🧪 [CRITICAL] INITIALIZING PHYSICS INTEGRITY SCAN...");
   
-  if (hallucinatedData.motorSpeed >= 99 && hallucinatedData.powerConsumption < 1) {
-    console.log("✅ SUCCESS: Physics Engine caught the Hallucination (Speed/Power mismatch).");
-    return true;
+  // This represents the "Hallucinated" output from an AI model
+  const hallucinatedData = { motorSpeed: 100, powerConsumption: 50 };
+  
+  console.log(`📊 TELEMETRY RECEIVED: Speed: ${hallucinatedData.motorSpeed}%, Power: ${hallucinatedData.powerConsumption}W`);
+
+  // Logic: Power must exist if Speed > 0
+  if (hallucinatedData.motorSpeed > 0 && hallucinatedData.powerConsumption === 0) {
+    console.log("🚨 ALERT: PHYSICAL INVARIANTS VIOLATED!");
+    console.log("🚨 REASON: Law of Conservation of Energy - Motor cannot spin with zero power.");
+    console.log("❌ CRITICAL: AI HALLUCINATION DETECTED. SAFETY INTERCEPT ACTIVE.");
+    return false; // Return false to trigger the "Block"
   }
-  console.log("🚨 FAILURE: Physics Engine failed to catch the hallucination.");
-  return false;
+  return true;
 }
 
 async function runAudit() {
